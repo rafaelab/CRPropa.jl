@@ -1,0 +1,12 @@
+name = "CRPropa"
+uuid = "e8c1a9ce-cf17-46f8-be0a-48ebb1587479"
+authors = ["Rafael <rafaelab@users.noreply.github.com>"]
+version = "0.1.0"
+
+[deps]
+PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
+Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
+
+[compat]
+PythonCall = "0.9.23"
+Reexport = "1.2.2"
