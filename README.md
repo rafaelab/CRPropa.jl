@@ -1,3 +1,7 @@
 # CRPropa.jl
 
-Placeholder. Scratch of work in progress.
+This is a simple Julia wrapper for CRPropa.
+It uses PythonCall to wrap CRPropa's Python bindings.
+
+
+
