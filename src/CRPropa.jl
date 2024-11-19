@@ -1,6 +1,5 @@
 module CRPropa
 
-using Reexport
 using PythonCall
 
 
