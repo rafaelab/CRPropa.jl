@@ -294,7 +294,6 @@ items = (
 	:EllipsoidalBoundary,
 	:CylindricalBoundary,
 
-
 	# module/BreakCondition.h
 	:MaximumTrajectoryLength,
 	:MinimumEnergy,
@@ -390,7 +389,6 @@ items = (
 	:Ferriere,
 	:Nakanishi,
 	:DensityList,
-
 	)
 
 
