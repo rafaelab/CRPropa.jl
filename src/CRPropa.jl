@@ -14,24 +14,10 @@ import PythonCall:
 const crpropa = pynew()
 export crpropa
 
-# these items are the objects that we want to link to the CRPropa module
-items = (
-	:Candidate, 
-	
-	:eV,
-	:MeV,
-	:GeV,
-	:TeV,
-	:PeV,
-	:EeV,
-	:pc,
-	:kpc,
-	:Mpc,
-	:Gpc,
-	:gauss,
-	:muG,
-	:nG
-	)
+
+# ------------------------------------------------------------------------------------------------#
+#
+include("objects.jl")
 
 
 # ------------------------------------------------------------------------------------------------#
@@ -60,8 +46,16 @@ Link the objects to the CRPropa module.
 This allows us to use the objects as if they were defined in Julia.
 """
 macro linkObjects(name)
+	nameStr = string(name)
+	isAvailable = Symbol(name) ∈ optionalItems
 	quote
-		pycopy!($(esc(name)), crpropa.$(Symbol("$name")))
+		try
+			pycopy!($(esc(name)), crpropa.$(Symbol("$name")))
+		catch
+			if ! $isAvailable
+				@warn "Error linking " * $(nameStr) * ". CRPropa doesn't seem to contain it."
+			end
+		end
 	end
 end
 
@@ -85,21 +79,10 @@ end
 
 # ------------------------------------------------------------------------------------------------#
 #
-# export 
-# 	Candidate,
-# 	EeV
-# 	MeV,
-# 	GeV,
-# 	TeV,
-# 	PeV,
-# 	EeV
-# 	pc,
-# 	kpc,
-# 	Mpc,
-# 	Gpc,
-# 	gauss,
-# 	microGauss,
-# 	nanoGauss
+# export the objects to the module
+for name in items
+	@eval export $(name)
+end
 
 
 
