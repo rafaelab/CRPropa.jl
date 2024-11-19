@@ -333,7 +333,7 @@ items = (
 	:EMInverseComptonScattering,
 	:EMPairProduction,
 	:EMDoublePairProduction,
-	:EMTripletProduction,
+	:EMTripletPairProduction,
 
 	# module/PhotoPionProduction.h
 	:PhotoPionProduction,
@@ -384,20 +384,11 @@ items = (
 	:ParticleFilter,
 	:EmissionMapFiller,
 
-
-	# massDistribution/ConstantDensity.h
+	# massDistribution/*.h
 	:ConstantDensity,
-
-	# massDistribution/Cordes.h
 	:Cordes,
-
-	# massDistribution/Ferriere.h
 	:Ferriere,
-
-	# massDistribution/Nakanishi.h
 	:Nakanishi,
-
-	# massDistribution/DensityList.h
 	:DensityList,
 
 	)
@@ -419,4 +410,6 @@ optionalItems = (
 	# module/HDF5Output.h
 	:HDF5Output,
 
+	# module/magneticField/MagneticField.h
+	:RenormalizeMagneticField,
 )
