@@ -339,6 +339,7 @@ items = (
 	:PhotoPionProduction,
 
 	# module/PhotoDisintegration.h
+	:PhotoDisintegration,
 
 	# module/ElectronPairProduction.h
 	:ElectronPairProduction,
