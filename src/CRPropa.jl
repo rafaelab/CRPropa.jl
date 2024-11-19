@@ -1,7 +1,8 @@
 module CRPropa
 
 using Reexport
-@reexport using PythonCall
+using PythonCall
+
 
 import PythonCall:
 	pynew,
