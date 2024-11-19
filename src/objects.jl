@@ -97,6 +97,7 @@ items = (
 	:SourceParticleType,
 	:SourceMultipleParticleTypes,
 	:SourceEnergy,
+	:SourcePowerLawSpectrum,
 	:SourceComposition,
 	:SourcePosition,
 	:SourceMultiplePositions,
