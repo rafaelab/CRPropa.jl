@@ -68,7 +68,7 @@ It is called when loading the module.
 It is essential to handle the PythonCall objects.
 """
 function __init__()
-    pycopy!(crpropa, pyimport("crpropa"))
+	pycopy!(crpropa, pyimport("crpropa"))
 
 	for name in items
 		@eval @linkObjects $(name)
