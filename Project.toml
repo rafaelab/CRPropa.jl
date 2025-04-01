@@ -1,10 +1,10 @@
 name = "CRPropa"
 uuid = "e8c1a9ce-cf17-46f8-be0a-48ebb1587479"
 authors = ["Rafael <rafaelab@users.noreply.github.com>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
 
 [compat]
-PythonCall = "0.9.23"
+PythonCall = "0.9.24"
